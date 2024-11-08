@@ -1,30 +1,30 @@
 package com.education.hszg.sort.impl;
 
-import com.education.hszg.util.LinkedListPreview;
-import com.education.hszg.util.LinkedListPreview.*;
+import com.education.hszg.util.LinkedList;
+import com.education.hszg.util.LinkedList.*;
 
-public class InsertionSortLinkedListPreview{
+public class InsertionSortLinkedList {
 
     /**
      * Sorts the linked list using insertion sort and returns the sorted list.
      * @return the sorted LinkedList
      */
-    public LinkedListPreview sort(LinkedListPreview linkedListPreview) {
-        if (linkedListPreview.head == null || linkedListPreview.head.next == null) {
-            return linkedListPreview;
+    public LinkedList sort(LinkedList linkedList) {
+        if (linkedList.head == null || linkedList.head.next == null) {
+            return linkedList;
         }
 
         Node sorted = null;
 
-        Node current = linkedListPreview.head;
+        Node current = linkedList.head;
         while (current != null) {
             Node next = current.next;
             sorted = sortedInsert(sorted, current);
             current = next;
         }
 
-        linkedListPreview.head = sorted;
-        return linkedListPreview;
+        linkedList.head = sorted;
+        return linkedList;
     }
 
     /**

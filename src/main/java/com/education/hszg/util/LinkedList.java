@@ -1,6 +1,6 @@
 package com.education.hszg.util;
 
-public class LinkedListPreview {
+public class LinkedList {
     public Node head;
 
     /**
@@ -50,23 +50,23 @@ public class LinkedListPreview {
      * @param array int[] to use
      * @return LinkedList of the array
      */
-    public static LinkedListPreview toLinkedList(int[] array){
-        LinkedListPreview linkedListPreview = new LinkedListPreview();
+    public static LinkedList toLinkedList(int[] array){
+        LinkedList linkedList = new LinkedList();
         for (int i = 0; i < array.length; i++){
-            linkedListPreview.append(array[i]);
+            linkedList.append(array[i]);
         }
-        return linkedListPreview;
+        return linkedList;
     }
 
     /**
      * turns a LinkedList into an int[] with head as int[0]
-     * @param linkedListPreview the LinkedList to use
+     * @param linkedList the LinkedList to use
      * @return returns a new int[]
      */
-    public static int[] toInt(LinkedListPreview linkedListPreview){
-        int[] array = new int[linkedListPreview.size()];
-        Node curr = linkedListPreview.head;
-        for (int i = 0; i < linkedListPreview.size() - 1; i++) {
+    public static int[] toInt(LinkedList linkedList){
+        int[] array = new int[linkedList.size()];
+        Node curr = linkedList.head;
+        for (int i = 0; i < linkedList.size() - 1; i++) {
             array[i] = curr.value;
             curr = curr.next;
         }

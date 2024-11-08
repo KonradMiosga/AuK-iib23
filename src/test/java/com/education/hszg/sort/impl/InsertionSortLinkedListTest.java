@@ -1,7 +1,7 @@
 package com.education.hszg.sort.impl;
 
 
-import com.education.hszg.util.LinkedListPreview;
+import com.education.hszg.util.LinkedList;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.After;
@@ -13,17 +13,17 @@ import org.junit.runner.RunWith;
 import java.util.Arrays;
 
 @RunWith(JUnitParamsRunner.class)
-public class InsertionSortLinkedListPreviewTest {
-    InsertionSortLinkedListPreview insertionSortLinkedListPreview;
+public class InsertionSortLinkedListTest {
+    InsertionSortLinkedList insertionSortLinkedList;
 
     @Before
     public void before(){
-        insertionSortLinkedListPreview = new InsertionSortLinkedListPreview();
+        insertionSortLinkedList = new InsertionSortLinkedList();
     }
 
     @After
     public void after(){
-        insertionSortLinkedListPreview = null;
+        insertionSortLinkedList = null;
     }
 
     @Test
@@ -37,11 +37,11 @@ public class InsertionSortLinkedListPreviewTest {
 
     })
     public void testInsertionSortLinkedListPreviewTest(String inputNums, String expectedNums){
-        LinkedListPreview lLIn = LinkedListPreview.toLinkedList(Arrays.stream(inputNums.split("-")).mapToInt(Integer::parseInt).toArray());
-        lLIn = insertionSortLinkedListPreview.sort(lLIn);
-        LinkedListPreview lLExpected = LinkedListPreview.toLinkedList(Arrays.stream(expectedNums.split("-")).mapToInt(Integer::parseInt).toArray());
-        int[] inputConverted =  LinkedListPreview.toInt(lLIn);
-        int[] expectedConverted = LinkedListPreview.toInt(lLExpected);
+        LinkedList lLIn = LinkedList.toLinkedList(Arrays.stream(inputNums.split("-")).mapToInt(Integer::parseInt).toArray());
+        lLIn = insertionSortLinkedList.sort(lLIn);
+        LinkedList lLExpected = LinkedList.toLinkedList(Arrays.stream(expectedNums.split("-")).mapToInt(Integer::parseInt).toArray());
+        int[] inputConverted =  LinkedList.toInt(lLIn);
+        int[] expectedConverted = LinkedList.toInt(lLExpected);
         Assert.assertArrayEquals(expectedConverted, inputConverted);
     }
 }
