@@ -7,4 +7,5 @@
 git clone https://github.com/NiklasKaulfers/AuK-iib23.git <br><br>
 
 ## Add Code:
-per Pull Request
+per Pull Request <br>
+Guide : https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request <br>
