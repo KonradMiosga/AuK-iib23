@@ -4,3 +4,6 @@
 
 # ignore class files
 *.class
+
+# ignore zip files
+*.zip
