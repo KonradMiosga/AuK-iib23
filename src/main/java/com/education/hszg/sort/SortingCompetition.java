@@ -8,7 +8,7 @@ public class SortingCompetition {
 
     public static void main(String[] args) {
         //Zufallszahlen
-        int size = 200_000;
+        int size = 20_000;
         Random random = new Random();
         int[] dummyNumbers = new int[size];
         for (int i = 0; i < size; i++)
@@ -43,5 +43,13 @@ public class SortingCompetition {
         new InsertionSort().sort(insertionArray);
         long is_after = System.currentTimeMillis();
         System.out.println("InsertionSort braucht " + (is_after - is_before) + "ms bzw. " + (is_after - is_before) / 1000 + "s");
+
+        int[] insertionInsertionArray = dummyNumbers.clone();
+        long isa_before = System.currentTimeMillis();
+        new InsertionSortLinkedList().sort(insertionInsertionArray);
+        long isa_after = System.currentTimeMillis();
+        System.out.println("InsertionSort mit LinkedList braucht " + (isa_after - isa_before) + "ms bzw. " + (isa_after - isa_before) / 1000 + "s");
+
+
     }
 }
