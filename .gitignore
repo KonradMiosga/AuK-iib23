@@ -20,6 +20,12 @@ gradle-app.setting
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
 # Compiled class file
 *.class
 
