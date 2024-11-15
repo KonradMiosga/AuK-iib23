@@ -47,3 +47,6 @@ replay_pid*
 
 #vscode
 .vscode
+
+#wrapper
+!gradle/wrapper/gradle-wrapper.jar
