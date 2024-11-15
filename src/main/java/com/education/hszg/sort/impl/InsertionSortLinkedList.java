@@ -1,15 +1,16 @@
 package com.education.hszg.sort.impl;
 
+import com.education.hszg.sort.api.IntSorter;
 import com.education.hszg.util.LinkedList;
-import com.education.hszg.util.LinkedList.*;
+import com.education.hszg.util.Node;
 
-public class InsertionSortLinkedList {
+public class InsertionSortLinkedList implements IntSorter {
 
     /**
      * Sorts the linked list using insertion sort and returns the sorted list.
      * @return the sorted LinkedList
      */
-    public LinkedList sort(LinkedList linkedList) {
+    public LinkedList sortLinkedList(LinkedList linkedList) {
         if (linkedList.head == null || linkedList.head.next == null) {
             return linkedList;
         }
@@ -38,13 +39,20 @@ public class InsertionSortLinkedList {
             newNode.next = sorted;
             return newNode;
         } else {
-            Node current = sorted;
-            while (current.next != null && current.next.value < newNode.value) {
-                current = current.next;
+            Node temp = sorted;
+            while (temp.next != null && temp.next.value < newNode.value) {
+                temp = temp.next;
             }
-            newNode.next = current.next;
-            current.next = newNode;
+            newNode.next = temp.next;
+            temp.next = newNode;
         }
         return sorted;
+    }
+
+    @Override
+    public int[] sort(int[] intArr) {
+        LinkedList linkedList = LinkedList.toLinkedList(intArr);
+        linkedList = sortLinkedList(linkedList);
+        return LinkedList.toInt(linkedList);
     }
 }
