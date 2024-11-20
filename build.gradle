@@ -20,13 +20,13 @@ pitest {
     timestampedReports = false
 }
 
-task fatJar(type: Jar) {
+tasks.register('fatJar', Jar) {
     manifest {
         attributes 'Implementation-Title': 'Portfolio Projekt Gruppe Michael',
                 'Implementation-Version': '1.0',
                 'Main-Class': 'com.education.eurofh.bmi.BMICalculator'
     }
-    baseName = project.name + '-all'
+    baseName(project.name + '-all')
     from { configurations.implementation.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
