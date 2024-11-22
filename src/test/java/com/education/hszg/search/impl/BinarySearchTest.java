@@ -33,7 +33,7 @@ public class BinarySearchTest {
             "12-20-30-40-50     ,23     , false",
             "0-0-0-0-0          ,0      , true"
     })
-    public void testBubbleSort(String inputNumbers, int target, boolean expectedBool){
+    public void testBinarySearch(String inputNumbers, int target, boolean expectedBool){
         int[] inputInts = Arrays.stream(inputNumbers.split("-")).mapToInt(Integer::parseInt).toArray();
         binarySearch.search(inputInts, target);
         Assert.assertEquals(expectedBool, binarySearch.search(inputInts, target));
