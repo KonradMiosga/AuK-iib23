@@ -4,18 +4,18 @@ import com.education.hszg.sort.api.IntSorter;
 
 public class SelectionSort implements IntSorter {
     @Override
-    public int[] sort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
+    public int[] sort(int[] numbers) {
+        for (int i = 0; i < numbers.length - 1; i++) {
             int minIndex = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[minIndex]) {
+            for (int j = i + 1; j < numbers.length; j++) {
+                if (numbers[j] < numbers[minIndex]) {
                     minIndex = j;
                 }
             }
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
+            int temp = numbers[minIndex];
+            numbers[minIndex] = numbers[i];
+            numbers[i] = temp;
         }
-        return arr;
+        return numbers;
     }
 }

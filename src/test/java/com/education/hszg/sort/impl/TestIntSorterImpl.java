@@ -30,7 +30,7 @@ public class TestIntSorterImpl {
 
 
 
-    IntSorter[] mySortingImpls = new IntSorter[5];
+    IntSorter[] mySortingImpls = new IntSorter[6];
 
 
 
@@ -47,6 +47,8 @@ public class TestIntSorterImpl {
         mySortingImpls[3] = new MergeSort();
 
         mySortingImpls[4] = new InsertionSort();
+
+        mySortingImpls[5] = new TreapSort();
 
     }
 

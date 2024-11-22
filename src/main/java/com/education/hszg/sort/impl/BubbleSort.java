@@ -5,15 +5,15 @@ import com.education.hszg.sort.api.IntSorter;
 public class BubbleSort implements IntSorter {
 
     @Override
-    public int[] sort(int[] arr) {
+    public int[] sort(int[] numbers) {
         boolean swapped;
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (int i = 0; i < numbers.length - 1; i++) {
             swapped = false;
-            for (int j = 0; j < (arr.length - 1); j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+            for (int j = 0; j < (numbers.length - 1); j++) {
+                if (numbers[j] > numbers[j + 1]) {
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
                     swapped = true;
                 }
             }
@@ -21,7 +21,7 @@ public class BubbleSort implements IntSorter {
                 break;
             }
         }
-        return arr;
+        return numbers;
     }
 
     public static void main(String[] args) {

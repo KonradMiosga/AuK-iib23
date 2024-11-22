@@ -50,8 +50,8 @@ public class InsertionSortLinkedList implements IntSorter {
     }
 
     @Override
-    public int[] sort(int[] intArr) {
-        LinkedList linkedList = LinkedList.toLinkedList(intArr);
+    public int[] sort(int[] numbers) {
+        LinkedList linkedList = LinkedList.toLinkedList(numbers);
         linkedList = sortLinkedList(linkedList);
         return LinkedList.toInt(linkedList);
     }

@@ -9,19 +9,19 @@ public class MergeSort implements IntSorter {
 
 
     @Override
-    public int[] sort(int[] intArray) {
+    public int[] sort(int[] numbers) {
         List<Integer> intList = new ArrayList<>();
-        for (int i = 0; i < intArray.length; i++) {
-            intList.add(intArray[i]);
+        for (int i = 0; i < numbers.length; i++) {
+            intList.add(numbers[i]);
         }
 
         List<Integer> sortedList = mergeSort(intList);
 
         for (int i = 0; i < sortedList.size(); i++) {
-            intArray[i] = sortedList.get(i);
+            numbers[i] = sortedList.get(i);
         }
 
-        return intArray;
+        return numbers;
     }
 
     private List<Integer> mergeSort(List<Integer> intList){
